@@ -103,7 +103,7 @@ Keyframes animation
   }
 }
 
-@keyframes slideRight {
+/* @keyframes slideRight {
   0%{
     transform: translateX(-100px);
     opacity: 0;
@@ -123,7 +123,8 @@ Keyframes animation
     transform: translateX(0px);
     opacity: 1;
   }
-}
+} */
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -144,8 +145,6 @@ Keyframes animation
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 6px;
-  animation: slideTop 5s ease forwards infinite;
-  animation-delay: 5s;
 }
 .section-title h2 {
   color: #ffffff;
@@ -637,94 +636,6 @@ Keyframes animation
   display: none;
 }
 
-/*---------------------
-  Counter
------------------------*/
-.counter {
-  background: #07090b;
-  height: 840px;
-  padding-top: 380px;
-  overflow: hidden;
-}
-
-.counter__content {
-  padding: 0px 50px;
-}
-
-.counter__item {
-  background: #1a083d;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-  height: 255px;
-  width: 255px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-.counter__item::before {
-  position: absolute;
-  left: -1px;
-  bottom: -2px;
-  height: 636px;
-  width: 636px;
-  border-left: 1px solid #333333;
-  border-top: 1px solid #333333;
-  content: "";
-  z-index: -1;
-}
-.counter__item.second__item {
-  margin-top: -185px;
-}
-.counter__item.second__item:before {
-  left: -316px;
-  bottom: -65px;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: none;
-  border-top: none;
-}
-.counter__item.four__item {
-  margin-top: -185px;
-}
-.counter__item.four__item:before {
-  left: -380px;
-  bottom: -380px;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: none;
-  border-top: none;
-}
-.counter__item.third__item:before {
-  left: -65px;
-  bottom: -317px;
-}
-
-.counter__item__text {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-}
-.counter__item__text h2 {
-  font-size: 60px;
-  color: #ffffff;
-  font-weight: 700;
-  margin-bottom: 6px;
-  margin-top: 18px;
-}
-.counter__item__text p {
-  color: #ffffff;
-  margin-bottom: 0;
-}
 
 /*---------------------
   Team
@@ -842,43 +753,6 @@ Keyframes animation
 }
 .latest__slider.owl-carousel .owl-dots button:last-child {
   margin-right: 0;
-}
-
-/*---------------------
-  Call To Active
------------------------*/
-.callto {
-  padding-top: 130px;
-}
-.callto.sp__callto {
-  padding-top: 0;
-  background: #07090b;
-}
-
-.callto__text h2 {
-  color: #ffffff;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 55px;
-  margin-bottom: 22px;
-}
-.callto__text p {
-  font-size: 15px;
-  color: #ffffff;
-  opacity: 0.7;
-  text-transform: uppercase;
-  margin-bottom: 55px;
-}
-.callto__text a {
-  color: #ffffff;
-  background: #00bfe7;
-  font-size: 15px;
-  font-weight: 700;
-  font-family: "Play", sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 14px 32px 12px;
 }
 
 /*---------------------
@@ -1012,43 +886,6 @@ Keyframes animation
 }
 .footer__copyright__text a {
   color: #00bfe7;
-}
-
-/*---------------------
-  Breadcrumb
------------------------*/
-.breadcrumb-option {
-  padding-top: 180px;
-}
-
-.breadcrumb__text h2 {
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.breadcrumb__links a {
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 300;
-  display: inline-block;
-  margin-right: 32px;
-  position: relative;
-}
-.breadcrumb__links a:after {
-  position: absolute;
-  right: -22px;
-  top: -3px;
-  content: "/";
-  color: #adadad;
-  font-size: 20px;
-}
-.breadcrumb__links span {
-  font-size: 16px;
-  color: #adadad;
-  font-weight: 300;
-  display: inline-block;
 }
 
 /*---------------------
