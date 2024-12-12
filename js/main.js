@@ -126,3 +126,145 @@
     });
 
 })(jQuery);
+
+//GSAP below
+
+var tl= gsap.timeline()
+
+function page1Animation(){
+    tl.from("header ,nav li,.header__nav__social a",{
+        y: -40,
+        delay: 1,
+        duration: 2,
+        opacity: 0,
+        stagger: 0.15,
+    });
+}
+
+
+function aboutPageAnimation(){
+    var tl2 = gsap.timeline({
+        scrollTrigger:{
+            trigger:"#about",
+            scroller:"body",
+            start:"top 60%",
+            end:"top 35%",
+            scrub:2
+        }
+    });
+    
+    tl2.from("#about .about__pic div, #about .about__text div",{
+        scale:0,
+        opacity:0,
+        duration:1,
+        stagger:0.5
+    })
+}
+
+function skillsPageAnimation(){
+    var tl3 = gsap.timeline({
+        scrollTrigger:{
+            trigger:"#skills",
+            scroller:"body",
+            start:"top 55%",
+            end:"top 15%",
+            scrub:2
+        }
+    });
+
+    tl3.from(".services__title div,.services__title span,.services__title h2,.services__title p,.services__title a",{
+        y:300,
+        opacity:0,
+        duration:1,
+        stagger:0.5
+    })
+
+    tl3.from(".services__item",{
+        x:300,
+        opacity:0,
+        duration:2,
+        stagger:0.5
+    })
+
+}
+
+function QualificationPgAnimation(){
+    var tl4 = gsap.timeline({
+        scrollTrigger:{
+            trigger:"#Qualification",
+            scroller:"body",
+            start:"top 55%",
+            end:"top 15%",
+            scrub:2
+        }
+    });
+
+    tl4.from("#card1,#card2,#card3",{
+        y:400,
+        opacity:0,
+        duration:2,
+        stagger:1
+    })
+}
+
+function softSkillsAnimation(){
+    var tl5= gsap.timeline({
+        scrollTrigger:{
+            trigger:"#SoftSkills",
+            scroller:"body",
+            start:"top 45%",
+            end:"top 20%",
+            scrub:2
+        }
+    });
+
+    tl5.from("#SoftSkills h4,#SoftSkills img,#SoftSkills li",{
+        scale:0,
+        opacity:0,
+        duration:2,
+        stagger:1
+    })
+}
+
+function projectsPgAnimation(){
+    var tl6 = gsap.timeline({
+        scrollTrigger:{
+            trigger:"#project",
+            scroller:"body",
+            start:"top 55%",
+            end:"top 15%",
+            scrub:2
+        }
+    });
+
+    tl6.from("#project .section-title",{
+        scale:0,
+        opacity:0,
+        duration:2,
+        stagger:1
+    })
+
+    tl6.from("#project ul li,#project .portfolio__item",{
+        y:400,
+        opacity:0,
+        duration:2,
+        stagger:1
+    })
+
+    tl6.from("#project .pagination__option",{
+        scale:0,
+        opacity:0,
+        duration:2,
+        stagger:1
+    })
+}
+
+page1Animation()
+aboutPageAnimation()
+skillsPageAnimation()
+QualificationPgAnimation()
+softSkillsAnimation()
+projectsPgAnimation()
+
+
+//one of the most imp problem here is that using scroll animations in gsap only scrolled pages can be seen. pages accessed using page up down button and arrow keys on keyboard are displayed as blank white pages.
